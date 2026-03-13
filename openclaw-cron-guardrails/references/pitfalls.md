@@ -128,3 +128,14 @@ Suspect timezone.
 - CLI behavior and agent-tool behavior can differ around session context.
 
 Because of that, prefer explicit, boring, reproducible cron definitions over clever shorthand.
+
+## Real-world failure patterns that motivated this skill
+
+These patterns were observed in real local cron state, not just imagined during design:
+
+- delivery-route failures in multi-channel setups
+- visible jobs relying on fragile implicit routing such as `channel=last`
+- explicit delivery channel without explicit delivery target
+- implicit or too-short timeout on non-trivial jobs
+
+This skill is meant to catch or prevent these patterns before they turn into silent failures.
