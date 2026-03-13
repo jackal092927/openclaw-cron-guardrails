@@ -2,7 +2,7 @@
 
 > ⚠️ Versión pública temprana. Se agradece feedback.
 >
-> **Idiomas:** [English](README.md) | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) | **Español**
+> **Idiomas:** [English](README.md) | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) | **Español** | [Français](README.fr.md) | [Deutsch](README.de.md)
 
 > Una capa segura y explicable para tareas programadas en sistemas de agentes.
 
@@ -157,6 +157,16 @@ Este skill nació de fallos reales observados en cron locales, incluyendo:
 
 ---
 
+## ✅ En qué destaca este skill
+
+- creación más segura de scheduled tasks
+- defaults más explicables para routing y delivery
+- validation estructurada antes de crear
+- detección de configuraciones riesgosas de visible delivery
+- soporte tanto para integración human-friendly como system-friendly
+
+---
+
 ## 🚫 No objetivos
 
 Este proyecto **no** intenta ser:
@@ -185,3 +195,9 @@ Especialmente interesa saber:
 
 - GitHub: <https://github.com/jackal092927/openclaw-cron-guardrails>
 - ClawHub: <https://clawhub.ai/skills/openclaw-cron-guardrails>
+
+---
+
+## 🧪 Estado
+
+Estado actual de publicación: **early public release / feedback-seeking**.

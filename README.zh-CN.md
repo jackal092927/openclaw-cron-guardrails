@@ -2,12 +2,12 @@
 
 > ⚠️ 早期公开版本，欢迎反馈。
 >
-> **语言：** [English](README.md) | **简体中文** | [日本語](README.ja.md) | [Español](README.es.md)
+> **语言：** [English](README.md) | **简体中文** | [日本語](README.ja.md) | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md)
 
 > 一个安全、可解释的 agent 定时任务防护层。
 
 `openclaw-cron-guardrails` 用来帮助用户和 agent 产品更安全地创建定时任务，重点处理：
-- session target
+- session targeting
 - delivery routing
 - timeout 选择
 - 显式可见输出目标

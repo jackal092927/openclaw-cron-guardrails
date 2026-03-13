@@ -2,7 +2,7 @@
 
 > ⚠️ 初期公開版です。フィードバック歓迎。
 >
-> **言語:** [English](README.md) | [简体中文](README.zh-CN.md) | **日本語** | [Español](README.es.md)
+> **言語:** [English](README.md) | [简体中文](README.zh-CN.md) | **日本語** | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md)
 
 > エージェント向けスケジュール処理のための、安全で説明可能なガードレイヤー。
 
@@ -157,6 +157,16 @@ openclaw-cron-guardrails.skill
 
 ---
 
+## ✅ この skill が得意なこと
+
+- より安全な scheduled-task 作成
+- explainable な routing / delivery defaults
+- 作成前の構造化 validation
+- risky な visible-delivery 設定の検出
+- human-friendly と system-friendly の両方の統合パスの支援
+
+---
+
 ## 🚫 非目標
 
 このプロジェクトは次を目指していません：
@@ -185,3 +195,9 @@ openclaw-cron-guardrails.skill
 
 - GitHub: <https://github.com/jackal092927/openclaw-cron-guardrails>
 - ClawHub: <https://clawhub.ai/skills/openclaw-cron-guardrails>
+
+---
+
+## 🧪 ステータス
+
+現在の公開状態：**early public release / feedback-seeking**。
