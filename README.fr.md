@@ -2,7 +2,7 @@
 
 > ⚠️ Version publique précoce. Les retours sont les bienvenus.
 >
-> **Langues :** [English](README.md) | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) | [Español](README.es.md) | **Français** | [Deutsch](README.de.md)
+> **Langues :** [English](README.md) | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md) | [日本語](README.ja.md) | [Español](README.es.md) | **Français** | [Deutsch](README.de.md)
 
 > Une couche sûre et explicable pour les tâches planifiées dans les systèmes d’agents.
 

@@ -2,7 +2,7 @@
 
 > ⚠️ 初期公開版です。フィードバック歓迎。
 >
-> **言語:** [English](README.md) | [简体中文](README.zh-CN.md) | **日本語** | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md)
+> **言語:** [English](README.md) | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md) | **日本語** | [Español](README.es.md) | [Français](README.fr.md) | [Deutsch](README.de.md)
 
 > エージェント向けスケジュール処理のための、安全で説明可能なガードレイヤー。
 

@@ -2,7 +2,7 @@
 
 > ⚠️ Early public release. Feedback welcome.
 >
-> **Languages:** **English** | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) | [Español](README.es.md)
+> **Languages:** **English** | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md) | [日本語](README.ja.md) | [Español](README.es.md)
 
 > A safe, explainable scheduled-task layer for agent systems.
 
