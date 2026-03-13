@@ -1,6 +1,6 @@
-# openclaw-cron-guardrails
+# OpenClaw Cron Guardrails
 
-A safe, explainable scheduled-task layer for agent systems.
+> A safe, explainable scheduled-task layer for agent systems.
 
 `openclaw-cron-guardrails` helps users and agent products create scheduled tasks with safer defaults around:
 - session targeting
@@ -8,39 +8,194 @@ A safe, explainable scheduled-task layer for agent systems.
 - timeout choice
 - explicit visible-output handling
 
-## What it is
+---
 
-This project is designed for OpenClaw-like systems that already have their own base model or planner.
-It does **not** try to be a universal natural-language interpreter.
+## ✨ What this is
+
+This project is designed for **OpenClaw-like systems** that already have their own base model, planner, or prompt-understanding layer.
+
+It does **not** try to be a universal natural-language cron interpreter.
 
 Instead, it focuses on:
-- easy-start patterns for common scheduled-task requests
-- deterministic validation/render flows
-- safer handling of visible delivery and multi-channel routing
+- **easy-start patterns** for common scheduled-task requests
+- **deterministic validation/render flows**
+- **safer handling** of visible delivery and multi-channel routing
+- **clear guardrails** around session target, delivery target, timezone, and timeout choices
 
-## Integration modes
+> Think of it as a **guardrails + validation + render layer** for scheduled agent actions.
 
-1. Natural-language quick start
-2. Normalized-intent handoff
-3. Spec-first deterministic path
+---
 
-See `openclaw-cron-guardrails/references/integration-modes.md`.
+## 🚀 Installation
 
-## Packaging
+### Option A — Install from ClawHub
 
-A packaged skill artifact is included:
-- `openclaw-cron-guardrails.skill`
+```bash
+clawhub install openclaw-cron-guardrails
+```
 
-## Known issues this skill is designed to catch
+### Option B — Clone from GitHub
+
+```bash
+git clone https://github.com/jackal092927/openclaw-cron-guardrails.git
+```
+
+Then copy the skill folder into your local skills directory if you manage skills manually.
+
+### Option C — Use the packaged artifact
+
+This repo also includes a packaged skill artifact:
+
+```text
+openclaw-cron-guardrails.skill
+```
+
+---
+
+## ⚡ Quick start
+
+Use it when the user asks for scheduled or repeated agent actions, for example:
+
+- `20 分钟后提醒我回消息`
+- `每天 9 点把总结发到这个 Discord thread`
+- `每晚跑一次 scan，不要发消息`
+- `每隔 10 分钟推一下当前 thread`
+- `Why did this cron go to the wrong place?`
+
+---
+
+## 🧩 Integration modes
+
+This skill supports **three integration styles**:
+
+### 1) Natural-language quick start
+Best when:
+- a human is asking directly
+- you want a friendly default path
+
+### 2) Normalized-intent handoff
+Best when:
+- an upstream model already interpreted the request
+- you want a stable middle layer before cron rendering
+
+### 3) Spec-first deterministic path
+Best when:
+- predictability matters more than natural-language convenience
+- your system already knows exactly what job should be created
+
+See:
+- `openclaw-cron-guardrails/references/integration-modes.md`
+
+---
+
+## 🛠️ Common examples
+
+### Reminder
+
+```text
+20 分钟后提醒我回消息
+```
+
+Expected safe pattern:
+- `main + systemEvent`
+
+### Visible scheduled delivery
+
+```text
+每天 9 点把 overnight summary 发到这个 Discord 频道
+```
+
+Expected safe pattern:
+- `isolated + explicit delivery.channel + explicit delivery.to`
+
+### Internal worker
+
+```text
+每晚跑一次 scan，更新本地状态，不用发消息
+```
+
+Expected safe pattern:
+- `isolated + delivery.mode:none`
+
+### Current-thread push loop
+
+```text
+每隔 10 分钟推一下当前 thread
+```
+
+Expected safe pattern:
+- session/thread-aware scheduled agent action
+- explicit current-thread preservation
+
+---
+
+## 📦 What's included
+
+This repo contains:
+
+- `SKILL.md` — top-level skill instructions
+- `references/` — patterns, pitfalls, diagnostics, examples, integration guidance
+- `scripts/` — parse, validate, render, create, lint, doctor, and fix helpers
+- `openclaw-cron-guardrails.skill` — packaged artifact for distribution
+
+---
+
+## 🔍 What problems this is designed to catch
 
 This skill was shaped by real cron failure patterns observed in local use, including:
+
 - delivery-route failures in multi-channel setups
 - fragile implicit routing such as `channel=last`
 - explicit channel without explicit target
 - implicit or too-short timeout on non-trivial jobs
 
-These are not theoretical edge cases; they are part of the reason this skill exists.
+> These are not theoretical edge cases; they are part of the reason this skill exists.
 
-## Status
+---
 
-Current release status: early public release / feedback-seeking.
+## ✅ What this skill is good at
+
+- safer scheduled-task creation
+- explainable routing and delivery defaults
+- structured validation before creation
+- catching risky visible-delivery configurations
+- supporting both human-friendly and system-friendly integration paths
+
+---
+
+## 🚫 Non-goals
+
+This project is **not** trying to be:
+
+- a universal prompt-understanding layer
+- a full replacement for OpenClaw cron docs
+- a guarantee against every provider/runtime failure
+- a fully automatic repair system for every historical cron job
+
+If an upstream system already has a stronger model, that is fine — this skill is designed to sit **under** it, not replace it.
+
+---
+
+## 💬 Feedback welcome
+
+Best feedback areas:
+
+- scheduled-task patterns that still feel awkward
+- routing/delivery cases that should be safer
+- docs/examples that are still unclear
+- where the skill should ask for clarification earlier
+
+GitHub issues / discussions are the best place to report problems or improvement ideas.
+
+---
+
+## 🔗 Links
+
+- GitHub: <https://github.com/jackal092927/openclaw-cron-guardrails>
+- ClawHub: <https://clawhub.ai/skills/openclaw-cron-guardrails>
+
+---
+
+## 🧪 Status
+
+Current release status: **early public release / feedback-seeking**.
