@@ -56,10 +56,10 @@ openclaw-cron-guardrails.skill
 
 Use it when the user asks for scheduled or repeated agent actions, for example:
 
-- `20 分钟后提醒我回消息`
-- `每天 9 点把总结发到这个 Discord thread`
-- `每晚跑一次 scan，不要发消息`
-- `每隔 10 分钟推一下当前 thread`
+- `Remind me in 20 minutes to reply`
+- `Post the daily summary to this Discord thread at 9am`
+- `Run a nightly scan and keep it internal`
+- `Push this current thread every 10 minutes`
 - `Why did this cron go to the wrong place?`
 
 ---
@@ -93,7 +93,7 @@ See:
 ### Reminder
 
 ```text
-20 分钟后提醒我回消息
+Remind me in 20 minutes to reply
 ```
 
 Expected safe pattern:
@@ -102,7 +102,7 @@ Expected safe pattern:
 ### Visible scheduled delivery
 
 ```text
-每天 9 点把 overnight summary 发到这个 Discord 频道
+Post the overnight summary to this Discord channel at 9am every day
 ```
 
 Expected safe pattern:
@@ -111,7 +111,7 @@ Expected safe pattern:
 ### Internal worker
 
 ```text
-每晚跑一次 scan，更新本地状态，不用发消息
+Run a nightly scan, update local state, and do not post anything
 ```
 
 Expected safe pattern:
@@ -120,7 +120,7 @@ Expected safe pattern:
 ### Current-thread push loop
 
 ```text
-每隔 10 分钟推一下当前 thread
+Push this current thread every 10 minutes
 ```
 
 Expected safe pattern:
