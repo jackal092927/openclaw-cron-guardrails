@@ -31,6 +31,16 @@ See `openclaw-cron-guardrails/references/integration-modes.md`.
 A packaged skill artifact is included:
 - `openclaw-cron-guardrails.skill`
 
+## Known issues this skill is designed to catch
+
+This skill was shaped by real cron failure patterns observed in local use, including:
+- delivery-route failures in multi-channel setups
+- fragile implicit routing such as `channel=last`
+- explicit channel without explicit target
+- implicit or too-short timeout on non-trivial jobs
+
+These are not theoretical edge cases; they are part of the reason this skill exists.
+
 ## Status
 
 Current release status: early public release / feedback-seeking.
