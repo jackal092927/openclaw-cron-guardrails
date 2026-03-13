@@ -5,7 +5,7 @@ Use these examples to keep the skill prompt-first and user-shaped.
 ## 1) Plain reminder
 
 User says:
-- `20 分钟后提醒我回消息`
+- `Remind me in 20 minutes to reply`
 - `Remind me in 20 minutes to check the GPU run`
 
 Preferred pattern:
@@ -18,7 +18,7 @@ Why:
 ## 2) Recurring reminder
 
 User says:
-- `每天早上 9 点提醒我看 inbox`
+- `Remind me every morning at 9am to check my inbox`
 - `Every weekday at 9am remind me to review email`
 
 Preferred pattern:
@@ -31,7 +31,7 @@ Why:
 ## 3) Internal background worker
 
 User says:
-- `每晚跑一次 scan，更新本地状态，不用发消息`
+- `Run a nightly scan, update local state, and do not post anything`
 - `Run a nightly maintenance job and don't post anything`
 
 Preferred pattern:
@@ -45,7 +45,7 @@ Why:
 ## 4) Visible scheduled delivery
 
 User says:
-- `每天 9 点把 overnight summary 发到这个 Discord 频道`
+- `Post the overnight summary to this Discord channel at 9am every day`
 - `Post the daily digest to this thread every morning`
 
 Preferred pattern:
@@ -58,7 +58,7 @@ Why:
 ## 5) Current thread push loop
 
 User says:
-- `每隔 10 分钟推一下当前 thread`
+- `Push the current thread every 10 minutes`
 - `Keep nudging this session forward every 15 minutes`
 
 Preferred pattern:
@@ -71,7 +71,7 @@ Why:
 ## 6) Diagnose an existing job
 
 User says:
-- `这个 cron 为什么没发出来？`
+- `Why did this cron not deliver?`
 - `Why did this job go to the wrong place?`
 
 Preferred pattern:
@@ -85,7 +85,7 @@ Why:
 ## 7) Repair an existing job
 
 User says:
-- `把这个 job 改成发到当前 thread`
+- `Change this job so it posts to the current thread`
 - `Increase the timeout on this cron and keep everything else the same`
 
 Preferred pattern:
@@ -97,7 +97,7 @@ Why:
 ## 8) Ambiguous request that should trigger clarification
 
 User says:
-- `每天早上帮我看一下 papers`
+- `Check papers for me every morning`
 - `Set up a recurring task to keep an eye on this`
 
 Likely clarification:

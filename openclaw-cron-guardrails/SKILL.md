@@ -31,32 +31,32 @@ The timer is usually not the hard part. The hard part is choosing the right task
 Choose one bucket first:
 
 1. **Plain reminder**
-- Example: `20 分钟后提醒我回消息`
+- Example: `Remind me in 20 minutes to reply`
 - Default: `main + systemEvent`
 - Use for lightweight reminders and nudges.
 
 2. **Recurring reminder**
-- Example: `每天早上提醒我看日历`
+- Example: `Remind me every morning to check my calendar`
 - Usually still `main + systemEvent`
 - Set timezone explicitly if wall-clock time matters.
 
 3. **Internal worker**
-- Example: `每晚跑一次 scan，写本地状态就行`
+- Example: `Run a nightly scan and keep the results local`
 - Default: `isolated + delivery.mode:none`
 - Use for background chores, scans, maintenance, and noisy internal jobs.
 
 4. **Scheduled visible delivery**
-- Example: `每天 9 点把总结发到 Discord`
+- Example: `Post the daily summary to Discord at 9am`
 - Default: `isolated + explicit delivery.channel + explicit delivery.to`
 - Do not rely on implicit `last` in multi-channel setups.
 
 5. **Session/thread push or prompt injection**
-- Example: `每隔 10 分钟推一下当前 thread`
+- Example: `Push the current thread every 10 minutes`
 - Preserve current-session / current-thread intent explicitly.
 - Do not silently convert this into generic visible delivery.
 
 6. **Diagnose / repair existing cron**
-- Example: `这个 job 为什么没发出来` / `修一下这个 cron`
+- Example: `Why did this job not deliver?` / `Fix this cron`
 - Inspect first. Do not recreate blindly.
 
 ## Safe defaults

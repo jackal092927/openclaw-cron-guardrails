@@ -7,12 +7,10 @@ When the user speaks in natural language, map the request into one of these inte
 ## Intent bucket 1 — Reminder / alarm
 
 Typical phrases:
-- `提醒我`
-- `设个闹钟`
-- `给我设个闹钟`
-- `X 分钟后提醒我`
-- `明天早上提醒我`
 - `remind me`
+- `set an alarm`
+- `remind me in X minutes`
+- `remind me tomorrow morning`
 - `alarm`
 
 Default mapping:
@@ -25,15 +23,13 @@ Do not overcomplicate these into isolated jobs unless the user explicitly wants 
 ## Intent bucket 2 — Repeat loop / bounded repeat
 
 Typical phrases:
-- `每隔 X 分钟`
-- `每 X 小时`
-- `每隔 X 分钟跑一次`
-- `执行 N 次`
-- `总共执行 N 次`
-- `未来 X 分钟执行 N 次`
+- `every X minutes`
+- `every X hours`
+- `run every X minutes`
+- `run N times`
+- `for N runs`
 - `loop`
 - `tick`
-- `循环跑`
 
 Default mapping:
 - reminder-like repeat → `main`
@@ -47,11 +43,10 @@ Important field extraction:
 ## Intent bucket 3 — Session/thread prompt injection or push loop
 
 Typical phrases:
-- `对当前 session 做一个 prompt 注入`
-- `给当前 agent 注入 prompt`
-- `每隔 X 分钟 push 一下`
-- `持续推进这个 agent`
-- `继续推这个 thread`
+- `inject a prompt into the current session`
+- `inject a prompt into the current agent`
+- `push the current thread every X minutes`
+- `keep pushing this thread`
 - `push it as far as you can`
 
 Default mapping:
@@ -64,17 +59,14 @@ If the request is really “nudge the current agent/thread repeatedly”, prefer
 ## Intent bucket 4 — Scheduled worker / scan / monitor / digest
 
 Typical phrases:
-- `每天`
-- `每晚`
-- `定时`
 - `daily`
 - `nightly`
+- `scheduled`
 - `scan`
 - `watch`
 - `monitor`
-- `定时检查`
-- `定时汇总`
-- `定时抓取`
+- `check periodically`
+- `summarize daily`
 
 Default mapping:
 - internal work → `isolated + delivery.mode:none`
